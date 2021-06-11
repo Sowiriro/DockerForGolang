@@ -1,7 +1,14 @@
-FROM golang:latest
+FROM golang:1.12.0-alpine3.9
 
-RUN mkdir /build 
+WORKDIR /DockerForGolang/src
 
-WORKDIR /build 
+ENV GO111MODULE=on
 
-CMD ["/bin/bash"]
+RUN apk add --no-cache \
+        alpine-sdk \
+        git \
+    && go get github.com/Sowiriro/DockerForGolang
+
+EXPOSE 8080
+
+CMD [""]
