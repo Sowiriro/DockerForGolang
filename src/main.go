@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-// Main function
+// Main function 動くぜ！！！
 func main() {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
