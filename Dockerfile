@@ -4,4 +4,6 @@ RUN mkdir /src
 
 COPY /src/main.go /src
 
+RUN apk update && apk add git
+
 CMD ["go", "run", "/src/main.go"]
